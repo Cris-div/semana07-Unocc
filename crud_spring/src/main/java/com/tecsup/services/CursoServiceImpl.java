@@ -33,7 +33,7 @@ public class CursoServiceImpl implements CursoService {
     }
 
     @Override
-    public Object findByNombre(String nombre) {
-        return null;
+    public List<Curso> findByNombre(String nombre) {
+        return dao.findByNombreContainingIgnoreCase(nombre);
     }
 }

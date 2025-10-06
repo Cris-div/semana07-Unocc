@@ -26,10 +26,10 @@ public class CursoController {
     public String crearCurso(Model model) {
         model.addAttribute("curso", new Curso());
         model.addAttribute("titulo", "Formulario de Curso");
-        return "formCursoView"; // plantilla para el formulario
+        return "formView"; // plantilla para el formulario
     }
 
-    //Guardar
+    //Guardar Nuevo curso o actulizar
     @PostMapping("/form")
     public String guardarCurso(@ModelAttribute("curso") Curso curso) {
         servicio.saveCourse(curso);
